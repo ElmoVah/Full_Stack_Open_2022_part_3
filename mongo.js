@@ -14,7 +14,7 @@ const url = `mongodb+srv://fullstack:${password}@cluster0.hyxmreu.mongodb.net/ph
 if (process.argv.length === 5) {
   mongoose
     .connect(url)
-    .then((result) => {
+    .then(() => {
       const person = new Person({
         name: process.argv[3],
         number: process.argv[4]
