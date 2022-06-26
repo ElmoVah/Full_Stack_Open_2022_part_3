@@ -33,11 +33,11 @@ if (process.argv.length === 3) {
   console.log('phonebook')
   mongoose
     .connect(url)
-    Person.find({}).then(result => {
-      result.forEach(person => {
-        console.log(`${person.name} ${person.number}`)
-      })
-      mongoose.connection.close()
+  Person.find({}).then(result => {
+    result.forEach(person => {
+      console.log(`${person.name} ${person.number}`)
     })
+    mongoose.connection.close()
+  })
     .catch((err) => console.log(err))
-} 
+}
